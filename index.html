@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinayak Overseas | Opportunities Beyond Borders</title>
+  
+  <!-- Font Awesome + Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/countries.css">
+  <link rel="stylesheet" href="css/clients.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <!-- ========== HEADER + NAVBAR ========== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Vinayak Overseas Logo" class="logo-img" onerror="this.src='https://placehold.co/50x50/1a56db/white?text=VO'">
+          <div class="logo-text">
+            <h1>Vinayak Overseas</h1>
+            <span>Opportunities Beyond Borders</span>
+          </div>
+        </div>
+        
+        <div class="nav-right">
+          <!-- Dark/Light Mode Toggle Button -->
+          <button class="theme-toggle" id="themeToggle" aria-label="Dark/Light Mode">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        
+        <ul class="nav-options" id="navMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#countries">Countries</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+<section id="home" class="hero">
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="assets/hero.mp4" type="video/mp4">
+  </video>
+
+  <!-- Overlay Content -->
+  <div class="container hero-content">
+    <h2>Work Abroad. Earn More. Grow Faster.</h2>
+    <p>We help you get jobs in Dubai, Canada & Europe with full visa and placement support.</p>
+
+    <div class="hero-points">
+      <span>✔ 8000+ Candidates Placed</span>
+      <span>✔ 20+ Countries</span>
+      <span>✔ Visa + Job Assistance</span>
+    </div>
+
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Apply Now →</a>
+      <a href="#countries" class="btn-outline">View Countries</a>
+    </div>
+  </div>
+
+</section>
+
+    <!-- ========== ABOUT US ========== -->
+    <section id="about" class="section about-section">
+  <div class="container">
+
+    <h2 class="section-title">How We Help You Go Abroad</h2>
+
+    <!-- STEP 1 -->
+    <div class="about-row">
+      <div class="about-img">
+        <img src="assets/about1.jpg">
+      </div>
+      <div class="about-text">
+        <h3>1. Profile Evaluation & Job Matching</h3>
+        <p>We analyze your skills and match you with the best international job opportunities based on your profile.</p>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="about-row reverse">
+      <div class="about-img">
+        <img src="assets/about2.jpg">
+      </div>
+      <div class="about-text">
+        <h3>2. Interview & Employer Connection</h3>
+        <p>We schedule interviews with verified employers and prepare you to crack them confidently.</p>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="about-row">
+      <div class="about-img">
+        <img src="assets/about3.jpg">
+      </div>
+      <div class="about-text">
+        <h3>3. Visa & Relocation Support</h3>
+        <p>From visa processing to relocation, we handle everything till you successfully reach abroad.</p>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="about-stats">
+      <div>
+        <h4>8000+</h4>
+        <span>Placements</span>
+      </div>
+      <div>
+        <h4>20+</h4>
+        <span>Countries</span>
+      </div>
+      <div>
+        <h4>92%</h4>
+        <span>Success Rate</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- ========== COUNTRIES ========== -->
+    <section id="countries" class="section countries-section">
+      <div class="container">
+        <h2 class="section-title">Countries We Provide Reach & Jobs For</h2>
+        <div class="countries-grid" id="countriesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ========== HAPPY CLIENTS ========== -->
+    <section id="clients" class="section clients-section">
+      <div class="container">
+        <h2 class="section-title">Happy Clients</h2>
+        <div class="clients-grid" id="clientsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT US ========== -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-flex">
+          <div class="contact-info">
+            <h3>Let's Talk Opportunities</h3>
+            <p>Whether you're a candidate or an employer, reach out — we reply within 24 hours.</p>
+            <div class="contact-detail">
+              <i class="fas fa-phone-alt"></i> 
+              <div>
+                <strong>Phone</strong><br>
+                +91 98765 43210
+              </div>
+            </div>
+            <div class="contact-detail">
+              <i class="fas fa-envelope"></i> 
+              <div>
+                <strong>Email</strong><br>
+                info@vinayakoverseas.com
+              </div>
+            </div>
+            <div class="contact-detail">
+              <i class="fas fa-map-marker-alt"></i> 
+              <div>
+                <strong>Office</strong><br>
+                Mumbai, India | Dubai, UAE
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <input type="text" placeholder="Your Full Name" required id="contactName">
+              <input type="email" placeholder="Your Email Address" required id="contactEmail">
+              <input type="tel" placeholder="Your Phone Number">
+              <textarea rows="3" placeholder="Tell us about your goals or questions..." id="contactMsg"></textarea>
+              <button type="submit">Send Message <i class="fas fa-arrow-right"></i></button>
+            </form>
+            <p id="formFeedback"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+ <footer class="footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- COMPANY -->
+      <div class="footer-col">
+        <h4>Vinayak Overseas</h4>
+        <p>Your trusted partner for global job opportunities.</p>
+
+        <div class="footer-stats">
+          <span>✔ 8000+ Placements</span>
+          <span>✔ 20+ Countries</span>
+          <span>✔ 92% Success Rate</span>
+        </div>
+      </div>
+
+      <!-- LINKS -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#countries">Countries</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <p>Job Placement</p>
+        <p>Visa Assistance</p>
+        <p>Interview Preparation</p>
+        <p>Relocation Support</p>
+      </div>
+
+      <!-- CONTACT + CTA -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📞 +91 98765 43210</p>
+        <p>📧 info@vinayakoverseas.com</p>
+        <p>📍 Mumbai | Dubai</p>
+
+      <!-- <a href="https://wa.me/919876543210?text=Hi%20I%20want%20job%20abroad" 
+        class="whatsapp-btn" target="_blank">
+        💬 Apply on WhatsApp
+      </a> -->
+      <a href="https://wa.me/919582927207?text=Hi%20Vinayak%20Overseas,%20I%20want%20job%20abroad" 
+        class="wa-float" target="_blank">
+
+        <span class="wa-tooltip">Chat with us</span>
+
+        <div class="wa-icon">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+
+      </a>
+      </div>
+
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- COPYRIGHT -->
+<div class="copyright">
+  <p>
+    © 2026 
+    <a href="https://raicorp.in/" target="_blank">raicorp.in</a>. 
+    All rights reserved.
+  </p>
+</div>
+
+  </div>
+</footer>
+
+  <!-- JavaScript Files -->
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/contact-form.js"></script>
+  <script src="js/dark-mode.js"></script>
+</body>
+</html>
