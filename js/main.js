@@ -15,36 +15,80 @@ const countriesData = [
 ];
 
 // ================= CLIENTS DATA =================
+// const clientsData = [
+//   {
+//     img: "https://randomuser.me/api/portraits/women/68.jpg",
+//     name: "Priya Mehta",
+//     company: "Germany",
+//     review: "Got job in Germany within 2 months. Very smooth process!",
+//     rating: 5
+//   },
+//   {
+//     img: "https://randomuser.me/api/portraits/men/32.jpg",
+//     name: "Rahul Verma",
+//     company: "Canada",
+//     review: "From interview to visa everything handled perfectly.",
+//     rating: 5
+//   },
+//   {
+//     img: "https://randomuser.me/api/portraits/women/45.jpg",
+//     name: "Neha Sharma",
+//     company: "Australia",
+//     review: "Amazing support, got job in 3 months.",
+//     rating: 5
+//   },
+//   {
+//     img: "https://randomuser.me/api/portraits/men/75.jpg",
+//     name: "Imran Khan",
+//     company: "Dubai",
+//     review: "Professional and fast service. Highly recommended.",
+//     rating: 5
+//   }
+// ];
+
+// const clientsData = [
+//   { name: "Rohit", country: "Dubai", review: "Got job in 2 months!" },
+//   { name: "Aman", country: "Canada", review: "Smooth visa process" },
+//   { name: "Sahil", country: "Malaysia", review: "Great support" },
+//   { name: "Neha", country: "Australia", review: "Amazing experience" },
+//   { name: "Rahul", country: "UK", review: "Very professional" },
+//   { name: "Simran", country: "Singapore", review: "Quick placement" }
+// ];
+
+// function loadClients() {
+//   const track = document.getElementById("clientsTrack");
+
+//   track.innerHTML = [...clientsData, ...clientsData].map(c => `
+//     <div class="client-card">
+//       <h4>${c.name}</h4>
+//       <p>${c.country}</p>
+//       <p>"${c.review}"</p>
+//     </div>
+//   `).join("");
+// }
+
 const clientsData = [
-  {
-    img: "https://randomuser.me/api/portraits/women/68.jpg",
-    name: "Priya Mehta",
-    company: "Germany",
-    review: "Got job in Germany within 2 months. Very smooth process!",
-    rating: 5
-  },
-  {
-    img: "https://randomuser.me/api/portraits/men/32.jpg",
-    name: "Rahul Verma",
-    company: "Canada",
-    review: "From interview to visa everything handled perfectly.",
-    rating: 5
-  },
-  {
-    img: "https://randomuser.me/api/portraits/women/45.jpg",
-    name: "Neha Sharma",
-    company: "Australia",
-    review: "Amazing support, got job in 3 months.",
-    rating: 5
-  },
-  {
-    img: "https://randomuser.me/api/portraits/men/75.jpg",
-    name: "Imran Khan",
-    company: "Dubai",
-    review: "Professional and fast service. Highly recommended.",
-    rating: 5
-  }
+  { img: "https://randomuser.me/api/portraits/men/11.jpg", name: "Rohit", country: "Dubai", review: "Got job in 2 months!" },
+  { img: "https://randomuser.me/api/portraits/men/32.jpg", name: "Aman", country: "Canada", review: "Smooth visa process" },
+  { img: "https://randomuser.me/api/portraits/men/45.jpg", name: "Sahil", country: "Malaysia", review: "Great support" },
+  { img: "https://randomuser.me/api/portraits/women/21.jpg", name: "Neha", country: "Australia", review: "Amazing experience" },
+  { img: "https://randomuser.me/api/portraits/men/55.jpg", name: "Rahul", country: "UK", review: "Very professional" },
+  { img: "https://randomuser.me/api/portraits/women/65.jpg", name: "Simran", country: "Singapore", review: "Quick placement" }
 ];
+
+function loadClients() {
+  const track = document.getElementById("clientsTrack");
+  if (!track) return;
+
+  track.innerHTML = [...clientsData, ...clientsData].map(c => `
+    <div class="client-card">
+      <img src="${c.img}" alt="${c.name}">
+      <h4>${c.name}</h4>
+      <p>${c.country}</p>
+      <p>"${c.review}"</p>
+    </div>
+  `).join("");
+}
 
 // ================= FLAGS =================
 function getFlag(country) {
@@ -85,24 +129,24 @@ function loadCountries() {
 }
 
 // ================= LOAD CLIENTS =================
-function loadClients() {
-  const grid = document.getElementById("clientsGrid");
-  if (!grid) return;
+// function loadClients() {
+//   const grid = document.getElementById("clientsGrid");
+//   if (!grid) return;
 
-  grid.innerHTML = clientsData.map(c => `
-    <div class="client-card">
-      <img src="${c.img}" alt="${c.name}">
-      <h4>${c.name}</h4>
-      <div class="company">${c.company}</div>
+//   grid.innerHTML = clientsData.map(c => `
+//     <div class="client-card">
+//       <img src="${c.img}" alt="${c.name}">
+//       <h4>${c.name}</h4>
+//       <div class="company">${c.company}</div>
 
-      <div class="rating">
-        ${"★".repeat(c.rating)}${"☆".repeat(5 - c.rating)}
-      </div>
+//       <div class="rating">
+//         ${"★".repeat(c.rating)}${"☆".repeat(5 - c.rating)}
+//       </div>
 
-      <p>"${c.review}"</p>
-    </div>
-  `).join("");
-}
+//       <p>"${c.review}"</p>
+//     </div>
+//   `).join("");
+// }
 
 // ================= INIT =================
 document.addEventListener("DOMContentLoaded", () => {

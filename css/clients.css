@@ -1,110 +1,127 @@
-.clients-section {
-  background: var(--primary-white);
-}
-
-.clients-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-lg);
-  justify-content: center;
-}
-
-.client-card {
-  background: var(--light-bg);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-  width: 280px;
-  text-align: center;
-  transition: var(--transition-normal);
-  border: 1px solid transparent;
-}
-
-.client-card:hover {
-  border-color: var(--primary-blue);
-  transform: translateY(-5px);
-}
-
-.client-card img {
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: var(--spacing-md);
-  border: 3px solid var(--primary-red);
-}
-
-.client-card h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.25rem;
-  color: var(--primary-blue);
-}
-
-.client-card .company {
-  font-size: 0.8rem;
-  color: var(--primary-red);
-  font-weight: 600;
-  margin-bottom: var(--spacing-sm);
-}
-
+/* ================= SECTION ================= */
 .clients-section {
   background: var(--bg-secondary);
+  position: relative;
 }
 
-.clients-grid {
+/* ================= SLIDER ================= */
+.clients-slider {
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+}
+
+/* TRACK */
+.clients-track {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-lg);
-  justify-content: center;
+  gap: 25px;
+  width: max-content;
+  animation: scrollClients 25s linear infinite;
 }
 
+/* PAUSE ON HOVER */
+.clients-slider:hover .clients-track {
+  animation-play-state: paused;
+}
+
+/* ================= CARD ================= */
 .client-card {
+  min-width: 260px;
+  max-width: 260px;
   background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-  width: 300px;
+  border-radius: 15px;
+  padding: 18px;
   text-align: center;
-  transition: var(--transition-normal);
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-sm);
+  transition: 0.3s;
+  position: relative;
 }
 
+/* HOVER EFFECT */
 .client-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary-blue);
 }
 
+/* ================= IMAGE ================= */
 .client-card img {
-  width: 85px;
-  height: 85px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 10px;
   border: 3px solid var(--primary-red);
 }
 
+/* ================= NAME ================= */
 .client-card h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+  margin-bottom: 3px;
   color: var(--text-primary);
 }
 
-.client-card .company {
-  font-size: 0.8rem;
+/* ================= COUNTRY ================= */
+.client-card p:nth-child(3) {
+  font-size: 0.85rem;
   color: var(--primary-blue);
   font-weight: 600;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 6px;
 }
 
-.client-card .rating {
-  color: var(--primary-gold);
-  margin-bottom: var(--spacing-sm);
-  font-size: 0.9rem;
-}
-
-.client-card p {
+/* ================= REVIEW ================= */
+.client-card p:last-child {
   font-style: italic;
+  font-size: 0.85rem;
   color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.4;
+}
+
+/* ================= OPTIONAL QUOTE ICON ================= */
+.client-card::before {
+  content: "“";
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 2rem;
+  color: var(--primary-blue);
+  opacity: 0.2;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes scrollClients {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .clients-track {
+    gap: 15px;
+    animation-duration: 18s;
+  }
+
+  .client-card {
+    min-width: 220px;
+    max-width: 220px;
+    padding: 14px;
+  }
+
+  .client-card img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .client-card h4 {
+    font-size: 1rem;
+  }
+
+  .client-card p {
+    font-size: 0.8rem;
+  }
 }
